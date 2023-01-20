@@ -29,6 +29,12 @@ rota.get("/api/v1/usuarios/:codigo", async (req, res) => {
     tipo_cadastro: usuario.tipo_cadastro,
     cadastrado: usuario.cadastrado,
     alterado: usuario.alterado,
+    url_avatar: usuario.url_avatar,
+    data_nascimento: usuario.data_nascimento,
+    cnh: usuario.cnh,
+    documento: usuario.documento,
+    celular: usuario.celular,
+    sobre_mim: usuario.sobre_mim,
   });
 });
 
