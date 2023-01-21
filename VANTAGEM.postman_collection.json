@@ -1,0 +1,193 @@
+{
+	"info": {
+		"_postman_id": "58767c02-2bee-4959-a7a1-6c9c87bfc45a",
+		"name": "VANTAGEM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CADASTRE-SE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nome\": \"Murilo\",\r\n    \"sobrenome\": \"Garcia\",\r\n    \"email\": \"murilogarcia.hr@gmail.com\",\r\n    \"senha\": \"mhgr230600\",\r\n    \"tipo_cadastro\": 2,\r\n    \"documento\": \"46423553831\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2258/api/v1/registro",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2258",
+					"path": [
+						"api",
+						"v1",
+						"registro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ACESSO",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"murilogarcia.hr@gmail.com\",\r\n    \"senha\": \"mhgr230600\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2258/api/v1/acesso",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2258",
+					"path": [
+						"api",
+						"v1",
+						"acesso"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USUARIO POR ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXJhbSI6eyJjb2RpZ28iOjl9LCJpYXQiOjE2NzQwMTI5NjN9.hqQymXoTAx0D7n3oO64gjRGEv8uNbng1vEkCv3FrYEc",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2258/api/v1/usuarios/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2258",
+					"path": [
+						"api",
+						"v1",
+						"usuarios",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALTERA SENHA USUARIO",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXJhbSI6eyJjb2RpZ28iOjl9LCJpYXQiOjE2NzQwMTI5NjN9.hqQymXoTAx0D7n3oO64gjRGEv8uNbng1vEkCv3FrYEc",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"senha_antiga\": \"123456\",\r\n    \"senha_nova\": \"230600\",\r\n    \"confirma_senha\": \"230600 \"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2258/api/v1/usuarios/1/alteraSenha",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2258",
+					"path": [
+						"api",
+						"v1",
+						"usuarios",
+						"1",
+						"alteraSenha"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALTERA E-MAIL USUARIO",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXJhbSI6eyJjb2RpZ28iOjl9LCJpYXQiOjE2NzQwMTI5NjN9.hqQymXoTAx0D7n3oO64gjRGEv8uNbng1vEkCv3FrYEc",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2258/api/v1/usuarios/1/alteraEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2258",
+					"path": [
+						"api",
+						"v1",
+						"usuarios",
+						"1",
+						"alteraEmail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ALTERA INFORMACOES USUARIO",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXJhbSI6eyJjb2RpZ28iOjl9LCJpYXQiOjE2NzQwMTI5NjN9.hqQymXoTAx0D7n3oO64gjRGEv8uNbng1vEkCv3FrYEc",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2258/api/v1/usuarios/1/alteraEmail",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2258",
+					"path": [
+						"api",
+						"v1",
+						"usuarios",
+						"1",
+						"alteraEmail"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
