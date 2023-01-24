@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const authConfig = require("../../config/autenticacao.json");
 
 function GenerateToken(param = {}) {
-  return jwt.sign({ param }, authConfig.secret);
+  return jwt.sign({ param }, authConfig.secret).toString();
 }
 
 rota.post("/api/v1/registro", async (req, res) => {
